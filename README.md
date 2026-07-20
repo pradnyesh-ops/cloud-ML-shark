@@ -1,7 +1,4 @@
-# 🦈 Marine Incident Fatality Prediction — Cloud ML Project
-**National College of Ireland | MSc Cloud Computing | MSCCLOUD1JAN26I**  
-**Module: Cloud Machine Learning | Weight: 50%**
-
+# 🦈 Predicting Risk of Fatal Coastal Incidents
 ---
 
 ## Research Question
@@ -11,9 +8,9 @@ Three machine learning algorithms are each applied independently to the same thr
 
 | Teammate | Algorithm | Notebook |
 |---|---|---|
-| pradnyesh  | Random Forest | `teammate1_random_forest.ipynb` |
-| Teammate 2 | Support Vector Machine (SVM) | `teammate2_svm.ipynb` |
-| Teammate 3 | XGBoost (Gradient Boosting) | `teammate3_xgboost.ipynb` |
+| Aditya  | Random Forest | `aditya_random_forest.ipynb` |
+| Pradnyesh | Support Vector Machine (SVM) | `Pradnyesh_svm.ipynb` |
+| Anurag | XGBoost (Gradient Boosting) | `Anurag_xgboost.ipynb` |
 
 ---
 
@@ -39,9 +36,9 @@ Three machine learning algorithms are each applied independently to the same thr
    ├── attacks.csv
    ├── geocoded-global-shark-attacks.csv
    ├── Surf_Zone_Fatalities_2010-Present.csv
-   ├── teammate1_random_forest.ipynb
-   ├── teammate2_svm.ipynb
-   ├── teammate3_xgboost.ipynb
+   ├── Aditya_random_forest.ipynb
+   ├── Pradnyesh_svm.ipynb
+   ├── Anurag_xgboost.ipynb
    └── dashboard.ipynb
    ```
 
@@ -50,7 +47,7 @@ Three machine learning algorithms are each applied independently to the same thr
 ### Step 2 — Open a Notebook in Google Colab
 
 **Option A — From Google Drive (recommended):**
-1. In Google Drive, double-click `teammate1_random_forest.ipynb`.
+1. In Google Drive, double-click `aditya_random_forest.ipynb`.
 2. Click **"Open with → Google Colaboratory"**.  
    *(If Colab is not listed: click "Connect more apps" and install it once.)*
 
@@ -71,7 +68,7 @@ Three machine learning algorithms are each applied independently to the same thr
 
 ### Step 4 — Run Teammate 1 (Random Forest)
 
-Open `teammate1_random_forest.ipynb` and run cells **top to bottom**:
+Open `aditya_random_forest.ipynb` and run cells **top to bottom**:
 
 | Cell # | What it does |
 |---|---|
@@ -97,7 +94,7 @@ Open `teammate1_random_forest.ipynb` and run cells **top to bottom**:
 
 ### Step 5 — Run Teammate 2 (SVM)
 
-Open `teammate2_svm.ipynb` and run all cells top to bottom.
+Open `Pradnyesh_svm.ipynb` and run all cells top to bottom.
 
 > SVM is sub-sampled to 5 000 rows for DS1 and 4 000 rows for DS2  
 > (SVM training is O(n²) — this is documented in the notebook).
@@ -108,7 +105,7 @@ Open `teammate2_svm.ipynb` and run all cells top to bottom.
 
 ### Step 6 — Run Teammate 3 (XGBoost)
 
-Open `teammate3_xgboost.ipynb` and run all cells top to bottom.
+Open `Anurag_xgboost.ipynb` and run all cells top to bottom.
 
 > Cell 3 auto-installs `xgboost` if it is not already available.
 
@@ -197,9 +194,9 @@ This aligns with cloud ML best practices: **train/test separation**, **stratifie
 CloudML/
 │
 ├── 📓 data_preparation.ipynb          ← Step 1 — combine datasets, EDA, split
-├── 📓 teammate1_random_forest.ipynb   ← Step 2 — Random Forest on combined data
-├── 📓 teammate2_svm.ipynb             ← Step 3 — SVM on combined data
-├── 📓 teammate3_xgboost.ipynb         ← Step 4 — XGBoost on combined data
+├── 📓 aditya_random_forest.ipynb   ← Step 2 — Random Forest on combined data
+├── 📓 Pradnyesh_svm.ipynb             ← Step 3 — SVM on combined data
+├── 📓 Anurag_xgboost.ipynb         ← Step 4 — XGBoost on combined data
 ├── 📓 dashboard.ipynb                 ← Step 5 — Client-facing Gradio + Folium app
 │
 ├── 📄 attacks.csv                     ← Raw Dataset 1 (25 723 rows)
@@ -264,11 +261,11 @@ All libraries are pre-installed in Colab or auto-installed by the notebooks.
 ```
 data_preparation.ipynb          ← MUST run first
         ↓  (saves combined_train.csv + combined_test.csv)
-teammate1_random_forest.ipynb   ← loads shared split, trains RF
+aditya_random_forest.ipynb   ← loads shared split, trains RF
         ↓
-teammate2_svm.ipynb             ← loads same split, trains SVM
+Pradnyesh_svm.ipynb             ← loads same split, trains SVM
         ↓
-teammate3_xgboost.ipynb         ← loads same split, trains XGBoost
+Anurag_xgboost.ipynb         ← loads same split, trains XGBoost
         ↓
 dashboard.ipynb                 ← loads all 3 combined models
 ```
